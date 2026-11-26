@@ -1,4 +1,5 @@
 #忽略动态数组章节的编译产物
 array/arr_capacity_append
 reverse_element/double_pointer_reverse
+adjust_odd_even_element/adjust_array
 
