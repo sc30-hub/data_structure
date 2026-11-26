@@ -42,6 +42,8 @@ class Array {
         for(int i=mcur-1; i>=pos; i--){
             mparr[i+1] = mparr[i];
         }
+        mcur++;
+        mparr[pos] = val;
     }
     //按位置删除元素
     void erase(int pos){
@@ -92,7 +94,9 @@ int main(void){
         array.push_back(rand()%100+1);
     }
     array.show();
-    array.insert(10,130);
+    array.insert(3,130);
+    array.show();
+    array.push_back(985);
     array.show();
     array.pop_back();
     array.show();
