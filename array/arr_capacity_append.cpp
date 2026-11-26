@@ -64,12 +64,13 @@ class Array {
         return -1;
     }
     //遍历输出数组元素
-    void array_info(){
+    void show() const{
         for(int i =0; i<mcur; i++){
             cout<<mparr[i]<<" ";
         }
+        cout<<endl;
     }
-
+    
     private:
     int *mparr;
     int mcap;
@@ -90,11 +91,17 @@ int main(void){
     for(int i=0; i<10; i++){
         array.push_back(rand()%100+1);
     }
-    array.array_info();
+    array.show();
+    array.insert(10,130);
+    array.show();
     array.pop_back();
-    cout<<endl;
-    array.array_info();
+    array.show();
     int num = array.find(60);
-    cout<<endl<<num<<endl;
+    if(num!=-1){
+        cout<<"pos is"<<num<<endl;
+    }
+    else{
+        cerr<<"not found"<<endl;
+    }
     return 0;
 }
